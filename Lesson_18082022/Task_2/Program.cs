@@ -15,6 +15,7 @@ int b = Convert.ToInt32(Console.ReadLine());
 Console.Write("Число a равно " + a + ", ");
 Console.WriteLine("число b равно " + b + ".");
 Console.WriteLine("Сравним эти числа.");
+
 if (a > b) {
     Console.WriteLine("Число a является большим, а число b меньшим.");
 } else if (a < b) {
@@ -22,4 +23,5 @@ if (a > b) {
 } else {
     Console.WriteLine("Числа a и b равны.");
 }
+
 Console.Write("Программа завершена успешно.");
