@@ -15,5 +15,6 @@ Console.Write(-N);
 for (int i = -N + 1; i <= N; i++) {
     Console.Write(", {0}", i);
 }
+
 Console.WriteLine(".");
 Console.Write("Программа завершена.");
