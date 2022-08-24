@@ -9,7 +9,7 @@ Console.Clear();
 System.Console.WriteLine("Задача 10: Напишите программу, которая принимает на вход трёхзначное число и на выходе показывает вторую цифру этого числа.");
 System.Console.Write("Введите целое трёхзначное число: ");
 
-int number = Int32.Parse(Console.ReadLine());
+int number = Convert.ToInt32(Console.ReadLine());
 int secondDigit = number % 100 / 10;
 
 System.Console.WriteLine($"Вторая цифра вашего числа: {secondDigit}");
