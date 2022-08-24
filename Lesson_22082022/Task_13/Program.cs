@@ -9,10 +9,11 @@
 */
 
 Console.Clear();
+System.Console.WriteLine("Задача 13: Напишите программу, которая выводит третью цифру заданного числа или сообщает, что третьей цифры нет.");
+
 int number; 
 int orderOfDigit = 2;
 
-System.Console.WriteLine("Задача 13: Напишите программу, которая выводит третью цифру заданного числа или сообщает, что третьей цифры нет.");
 System.Console.Write("Введите любое целое число: ");
 number = Convert.ToInt32(Console.ReadLine());
 string stringOfNumber = number.ToString();
