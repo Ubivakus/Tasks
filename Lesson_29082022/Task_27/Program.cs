@@ -10,13 +10,22 @@
 
 Console.Clear();
 
+while (true)
+{
+    System.Console.Write("Введите любое натуральное число или '0' для выхода из программы: ");
+    string number = Console.ReadLine();
+    if (number.Equals("0")) break;
+    int sumOfDigits = 0;    
 
-System.Console.Write("Введите любое натуральное число: ");
-string a = "59";
-int sum = 0;
-System.Console.WriteLine(a);
-System.Console.WriteLine(Convert.ToInt32(a[0]));
-System.Console.WriteLine(a[1]);
+    for (int i = 0; i < number.Length; i++)
+    {
+        sumOfDigits += int.Parse(number[i].ToString());
+    }
+    System.Console.WriteLine($"Сумма цифр вашего числа равна {sumOfDigits}.");
+}
+
+System.Console.WriteLine("Программа завершена.");
+
 
 
 
