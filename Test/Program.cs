@@ -114,4 +114,19 @@
 // 5) вывести массив на экран
 
 
+// int num = Int32.Parse(Console.ReadLine()); // Запрашиваем ввод из консоли и вытягиваем из него число
 
+// //Пишите тут.
+
+
+// string answer = (num % 2 == 0) ? "EVEN" : "ODD";
+
+// Console.WriteLine(answer);
+
+// int x = 5;
+
+// int y = 3;
+
+// int z = x < y ? (x + y) : (x - y);
+
+// Console.WriteLine(z);
