@@ -114,14 +114,14 @@
 // 5) вывести массив на экран
 
 
-// int num = Int32.Parse(Console.ReadLine()); // Запрашиваем ввод из консоли и вытягиваем из него число
+//  int num = Int32.Parse(Console.ReadLine()); // Запрашиваем ввод из консоли и вытягиваем из него число
 
-// //Пишите тут.
+// Пишите тут.
 
 
-// string answer = (num % 2 == 0) ? "EVEN" : "ODD";
+// string answer;
 
-// Console.WriteLine(answer);
+//  Console.WriteLine(answer = (num % 2 == 0) ? "EVEN" : "ODD");
 
 // int x = 5;
 
@@ -130,3 +130,27 @@
 // int z = x < y ? (x + y) : (x - y);
 
 // Console.WriteLine(z);
+
+
+
+
+// Создание, заполнение и вывод в консоль массива, массив не сохраняется
+
+// int[] FillAndPrintArray()
+// {
+//     System.Console.Write("Задайте размер массива: ");
+//     int size = Int32.Parse(Console.ReadLine());
+//     int[] array = new int[size];
+//     for (int i = 0; i < size; i++)
+//     {
+//         array[i] = new Random().Next(10);
+//     }
+//     for (int j = 0; j < size; j++)
+//     {
+//         if (j == 0) System.Console.Write($"[{array[j]}, ");
+//         else if (j < size - 1) System.Console.Write($"{array[j]}, ");
+//         else System.Console.Write($"{array[j]}]");
+//     }
+//     System.Console.WriteLine();
+//     return array;
+// }
