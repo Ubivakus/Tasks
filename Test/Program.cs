@@ -154,3 +154,11 @@
 //     System.Console.WriteLine();
 //     return array;
 // }
+
+
+
+
+// int min = -5;
+// int max = -156;
+// int diff = Math.Abs(max - min);
+// System.Console.WriteLine(diff);
