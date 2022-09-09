@@ -162,3 +162,145 @@
 // int max = -156;
 // int diff = Math.Abs(max - min);
 // System.Console.WriteLine(diff);
+
+/*
+Задача 48: Задайте двумерный массив размера m на n, каждый элемент в массиве находится по формуле: Aₘₙ = m+n. Выведите полученный массив на экран.
+m = 3, n = 4.
+0 1 2 3
+1 2 3 4
+2 3 4 5
+*/
+
+// int m = 3, n = 4;
+
+// int[,] array = new int[m, n];
+
+// for (int i = 0; i < array.GetLength(0); i++)
+// {
+//     for (int j = 0; j < array.GetLength(1); j++)
+//     {
+//         array[i, j] = i + j;
+//         System.Console.Write(array[i, j] + " ");
+//     }
+//     System.Console.WriteLine();
+// }
+// System.Console.WriteLine(array.GetLength(0));
+
+
+/*
+Задача 49: Задайте двумерный массив. Найдите элементы, у которых оба индекса чётные, и замените эти элементы на их квадраты.
+Например, изначально массив выглядел вот так:
+1 4 7 2
+5 9 2 3
+8 4 2 4
+Новый массив будет выглядеть вот так:
+1 4 7 2
+5 81 2 9
+8 4 2 4
+*/
+
+// int m = 3, n = 4;
+
+// int[,] array = new int[m, n];
+
+// for (int i = 0; i < array.GetLength(0); i++)
+// {
+//     for (int j = 0; j < array.GetLength(1); j++)
+//     {
+//         array[i, j] = i + j;
+//         System.Console.Write(array[i, j] + " ");
+//     }
+//     System.Console.WriteLine();
+// }
+// System.Console.WriteLine();
+
+// SquareArray(array);
+
+// void SquareArray(int[,] array)
+// {
+//     for (int i = 0; i < array.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < array.GetLength(1); j++)
+//         {
+//             if (i % 2 == 0 && j % 2 == 0) array[i, j] = array[i, j] * array[i, j];
+//             System.Console.Write(array[i, j] + " ");
+//         }
+//         System.Console.WriteLine();
+//     }
+// }
+
+
+/*
+Задача 51: Задайте двумерный массив. Найдите сумму элементов, находящихся на главной диагонали (с индексами (0,0); (1;1) и т.д.
+Например, задан массив:
+1 4 7 2
+5 9 2 3
+8 4 2 4
+Сумма элементов главной диагонали: 1+9+2 = 12
+*/
+
+// int m = 5, n = 5;
+
+// int[,] array = new int[m, n];
+
+// for (int i = 0; i < array.GetLength(0); i++)
+// {
+//     for (int j = 0; j < array.GetLength(1); j++)
+//     {
+//         array[i, j] = i + j;
+//         System.Console.Write(array[i, j] + " ");
+//     }
+//     System.Console.WriteLine();
+// }
+// System.Console.WriteLine();
+
+// DiagArray(array);
+
+// void DiagArray(int[,] array)
+// {
+//     int sum = 0;
+//     for (int i = 0; i < array.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < array.GetLength(1); j++)
+//         {
+
+//             if (i == j) sum += array[i, j];
+
+//         }
+
+//     }
+//     System.Console.WriteLine("Сумма элементов по диагонали равна: " + sum);
+// }
+
+// Задача дополнительная 
+// Задайте двумерный массив. Найдите сумму элементов, находящихся ниже главной диагонали 
+
+// int m = 5, n = 5;
+
+// int[,] array = new int[m, n];
+
+// for (int i = 0; i < array.GetLength(0); i++)
+// {
+//     for (int j = 0; j < array.GetLength(1); j++)
+//     {
+//         array[i, j] = i + j;
+//         System.Console.Write(array[i, j] + " ");
+//     }
+//     System.Console.WriteLine();
+// }
+// System.Console.WriteLine();
+
+// DiagArray(array);
+
+// void DiagArray(int[,] array)
+// {
+//     int sum = 0;
+//     for (int i = 0; i < array.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < array.GetLength(1); j++)
+//         {
+//             if (i > j) sum += array[i,j];
+//         }            
+//     }
+//     System.Console.WriteLine("Сумма элементов под главной диагональю равна: " + sum);
+// }

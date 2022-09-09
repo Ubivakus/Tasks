@@ -18,7 +18,7 @@ int countOfNumbers = CountOfPositiveNumbers(arrayOfNumbers); //Запускае�
 System.Console.WriteLine($"Количество чисел больше 0 равно: {countOfNumbers}");
 System.Console.WriteLine("Программа завершена.");
 
-int CountOfPositiveNumbers(string[] array) //Метод подсчитывает количество чисел больше 0
+int CountOfPositiveNumbers(string[] array) //Метод подсчитывает количество чисел больше 0 в массиве
 {
     int count = 0;
     for (int i = 0; i < array.Length; i++) //Проходимся по массиву, конвертируем символы в числа и проверяем условие > 0
