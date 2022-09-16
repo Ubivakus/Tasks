@@ -315,65 +315,138 @@ m = 3, n = 4.
 // 5 9 2 3
 // 1 4 7 2
 
-System.Console.Write("Задайте размер двумерного массива через пробел: ");
-string[] sizeOfMatrix = InputFromConsole();
-double[,] massive = CreateMatrix(sizeOfMatrix);
-double[,] newMassive = SwapRow(massive);
-PrintArray(newMassive);
+// System.Console.Write("Задайте размер двумерного массива через пробел: ");
+// string[] sizeOfMatrix = InputFromConsole();
+// double[,] massive = CreateMatrix(sizeOfMatrix);
+// double[,] newMassive = SwapRow(massive);
+// PrintArray(newMassive);
 
-string[] InputFromConsole() // Функция принимает данные из консоли и сохраняет в массив.
-{
-    string input = Console.ReadLine();
-    string[] splitArray = input.Split(' ');
-    return splitArray;
-}
+// string[] InputFromConsole() // Функция принимает данные из консоли и сохраняет в массив.
+// {
+//     string input = Console.ReadLine();
+//     string[] splitArray = input.Split(' ');
+//     return splitArray;
+// }
 
-double[,] CreateMatrix(string[] array) // Создаем, заполняем и выводим в консоль двумерный массив размером заданным пользователем.
-{
-    System.Console.WriteLine();
-    int rows = int.Parse(array[0]);
-    int columns = int.Parse(array[1]);
-    double[,] newArray = new double[rows, columns];
-    System.Console.WriteLine("Ваш новый массив: ");
+// double[,] CreateMatrix(string[] array) // Создаем, заполняем и выводим в консоль двумерный массив размером заданным пользователем.
+// {
+//     System.Console.WriteLine();
+//     int rows = int.Parse(array[0]);
+//     int columns = int.Parse(array[1]);
+//     double[,] newArray = new double[rows, columns];
+//     System.Console.WriteLine("Ваш новый массив: ");
 
-    for (int i = 0; i < newArray.GetLength(0); i++)
-    {
-        for (int j = 0; j < newArray.GetLength(1); j++)
-        {
-            newArray[i, j] = new Random().Next(10, 100);
-            System.Console.Write($"{newArray[i, j]}     ");
-        }
-        System.Console.WriteLine();
-    }
-    return newArray;
-}
+//     for (int i = 0; i < newArray.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < newArray.GetLength(1); j++)
+//         {
+//             newArray[i, j] = new Random().Next(10, 100);
+//             System.Console.Write($"{newArray[i, j]}     ");
+//         }
+//         System.Console.WriteLine();
+//     }
+//     return newArray;
+// }
 
 
-double[,] SwapRow(double[,] array)
-{
-    int row = array.GetLength(0);
-    int colomns = array.GetLength(1);
-    double[] tmp_row = new double[colomns];
-    for (int i = 0; i < colomns; i++)
-    {
-        tmp_row[i] = array[0, i];
-        array[0, i] = array[row - 1, i];
-        array[row - 1, i] = tmp_row[i];
-    }
-    return array;
-}
+// double[,] SwapRow(double[,] array)
+// {
+//     int row = array.GetLength(0);
+//     int colomns = array.GetLength(1);
+//     double[] tmp_row = new double[colomns];
+//     for (int i = 0; i < colomns; i++)
+//     {
+//         tmp_row[i] = array[0, i];
+//         array[0, i] = array[row - 1, i];
+//         array[row - 1, i] = tmp_row[i];
+//     }
+//     return array;
+// }
 
-void PrintArray(double[,] array)
-{
-    int row = array.GetLength(0);
-    int colomns = array.GetLength(1);
-    for (int i = 0; i < row; i++)
-    {
-        for (int j = 0; j < colomns; j++)
-        {
-            Console.Write("| " + array[i, j] + " |");
-        }
-        Console.WriteLine();
-    }
-}
+// void PrintArray(double[,] array)
+// {
+//     int row = array.GetLength(0);
+//     int colomns = array.GetLength(1);
+//     for (int i = 0; i < row; i++)
+//     {
+//         for (int j = 0; j < colomns; j++)
+//         {
+//             Console.Write("| " + array[i, j] + " |");
+//         }
+//         Console.WriteLine();
+//     }
+// }
+
+
+// Задача 63: Задайте значение N. Напишите программу, которая выведет все натуральные числа в промежутке от 1 до N.
+// N = 5 -> "1, 2, 3, 4, 5"
+// N = 6 -> "1, 2, 3, 4, 5, 6"
+
+// void PrintNumber(int number, int i)
+// {
+//     if(i <=number)
+//     {
+//         Console.Write($"{i} ");
+//         PrintNumber(number, i+1);
+//     }
+// }
+
+
+// Console.WriteLine("Введите число N :");
+// int number = Convert.ToInt32(Console.ReadLine());
+// PrintNumber(number, 1);
+
+
+
+// Задача 65: Задайте значения M и N. Напишите программу, которая выведет все натуральные числа в промежутке от M до N.
+// M = 1; N = 5. -> "1, 2, 3, 4, 5" M = 4; N = 8. -> "4, 5, 6, 7, 8"
+
+// void PrintNumber(int min, int max)
+// {
+//     if(min <=max)
+//     {
+//         Console.Write($"{min} ");
+//         PrintNumber(min+1,max);
+//     }
+// }
+
+
+// Console.WriteLine("Введите число M :");
+// int min = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Введите число N :");
+// int max = Convert.ToInt32(Console.ReadLine());
+// PrintNumber(min, max);
+
+
+
+// Задача 67: Напишите программу, которая будет принимать на вход число и возвращать сумму его цифр.
+// 453 -> 12
+// 45 -> 9
+
+// Console.WriteLine("Введите ваше число:");
+//             int num = Convert.ToInt32(Console.ReadLine());
+//             Console.WriteLine("Сумма цифр числа:"+Sum(num));
+
+//         static int Sum(int num)
+//         {
+//             if (num < 10) return num;
+//             else return num % 10 + Sum(num / 10);
+//         }
+
+
+// Задача 69: Напишите программу, которая на вход принимает два числа A и B, и возводит число А в целую степень B с помощью рекурсии.
+// A = 3; B = 5 -> 243 (3⁵)
+// A = 2; B = 3 -> 8
+
+// Console.WriteLine("Введите число A :");
+// int A = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Введите число B :");
+// int B = Convert.ToInt32(Console.ReadLine());
+// int PowRecursive(int x, int y) {
+//     if (y == 1)
+//         return x;
+//     return x * PowRecursive(x, --y);
+// }
+// 
+// Console.WriteLine(PowRecursive(A, B));
 
